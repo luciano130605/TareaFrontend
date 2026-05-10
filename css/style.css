@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #2cc2952d, #00Df81);
+    text-shadow: 1px 1px 2px black;
+}
+
+p:nth-child(odd) {
+    color: #00Df81;
+}
+
+.btn {
+    background: none;
+    border: 1px solid #00Df81;
+    border-radius: 20px;
+    padding: 10px;
+    transition: all .3s;
+    box-shadow: 1px 1px 2px #2CC295;
+    cursor: pointer;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.btn:hover,
+.btn:active {
+    background: #00Df81;
+    box-shadow: 1px 1px 2px #000000;
+    transform: scale(1, 1.2);
+}
+
+.contenedor {
+    border-radius: 20px;
+    padding: 10px;
+    background: #2cc2952d;
+    text-align: center;
+}
+
+.cajaContent,
+.cajaBorder {
+    background: #2cc2952d;
+    border-radius: 20px;
+    border: 1px solid #00Df81;
+    text-align: center;
+    width: 300px;
+    padding: 10px;
+    margin: 20px auto;
+
+}
+
+.cajaContent {
+    box-sizing: content-box;
+}
+
+.cajaBorder {
+    box-sizing: border-box;
+}
+
+.lista {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+.tarjetasContenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .tarjetasContenedor {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.tarjeta1,
+.tarjeta2,
+.tarjeta3 {
+    background: #2cc2952d;
+    border: 1px solid #2CC295;
+    border-radius: 20px;
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+.animacion {
+    margin-top: 20px;
+    padding: 20px;
+    background: #00Df81;
+    animation: aparecer 1s ease;
+    text-align: center;
+    border-radius: 20px;
+
+
+
+}
+
+@keyframes aparecer {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.imagenTransicion {
+    width: 100px;
+    margin-top: 100px;
+    height: 100px;
+    transition: all .3s;
+}
+
+.imagenTransicion:hover {
+    transform: scale(1, 2);
+}
+
+.contenedorFondoCompuesto {
+    background: #2cc2952d;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #00Df81;
+    border-radius: 12px;
+    background-image: url("https://picsum.photos/400");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listaVertical {
+    margin-top: 20px;
+}
+
+.listaVertical li {
+    margin-bottom: 20px;
+    border: 1px solid #00Df81;
+    border-radius: 20px;
+    padding: 2px;
+}
+
+.listaVertical li:hover {
+    color: #2CC295;
+}
+
+.fila1,
+.fila2,
+.fila3 {
+    color: white;
+    transition: all .3s;
+}
+
+.fila1 {
+    background: #00Df81;
+}
+
+.fila1:hover {
+    border: 1px solid #00Df81;
+    color: black;
+    background: none;
+}
+
+.fila2 {
+    background: #2CC295;
+}
+
+.fila2:hover {
+    border: 1px solid #2CC295;
+    color: black;
+    background: none;
+}
+
+.fila3 {
+    background: black;
+}
+
+.fila3:hover {
+    background: none;
+    color: black;
+    border: 1px solid black;
+}
+
+.imagenFlotante {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin-right: 15px;
+    border-radius: 12px;
+}
+
+.textoFlotante {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.textoFlotante::first-letter {
+    color: #00Df81;
+}
+
+.cajaCentrada {
+    width: 100px;
+    padding: 10px;
+    background: #2CC295;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.elementos {
+    margin-top: 200px;
+}
+
+.elemento1 {
+    background: #00Df81 !important;
+    display: inline;
+}
+
+.elemento2 {
+    display: block;
+    background: #2CC295;
+}
+
+.elemento3 {
+    display: inline-block;
+    background: #2cc2952d;
+}
+
+.elemento4 {
+    display: none;
+    background: #000000;
+}
+
+.encabezado {
+    top: 0;
+    position: sticky;
+    background: #2cc2955d;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 10px;
+}
