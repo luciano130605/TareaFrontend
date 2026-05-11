@@ -253,3 +253,133 @@ p:nth-child(odd) {
     border-radius: 20px;
     padding: 10px;
 }
+
+.btnIconContenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonIcono {
+    background: none;
+    border: 1px solid #2CC295;
+    margin-top: 100px;
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.botonIcono::before {
+    content: "Botón";
+}
+
+.botonIcono::after {
+    content: "Icono";
+}
+
+.cuadradoRoteContenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadradoRote {
+    background: #00Df81;
+    margin-top: 50px;
+    width: 10%;
+    height: 50px;
+    padding: 10px;
+}
+
+.cuadradoRote:hover {
+    animation: girar 1s linear;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.layoutGrid {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "aside main"
+        "footer footer"
+    ;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+    background: #2cc2952d;
+    padding: 10px;
+    border: 1px solid #00Df81;
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.layoutGrid div {
+    padding: 10px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.header {
+    grid-area: header;
+    background: #00Df81;
+}
+
+.nav {
+    grid-area: nav;
+    background: #2cc29576;
+}
+
+
+.main {
+    grid-area: main;
+    background: #2CC295;
+}
+
+.aside {
+    grid-area: aside;
+    background: #2cc29576;
+}
+
+.footer {
+    grid-area: footer;
+    background: #00Df81;
+}
+
+.disenoAdaptativoContenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    background: #2cc29576;
+    border-radius: 12px;
+    border: 1px solid #00Df81;
+    font-size: 20px;
+}
+
+
+.disenoAdaptativoContenedor p {
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .disenoAdaptativoContenedor {
+        background: #00Df81;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .disenoAdaptativoContenedor {
+        background: #2CC295;
+        font-size: 8px;
+    }
+}
