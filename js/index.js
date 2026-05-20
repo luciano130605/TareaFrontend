@@ -86,6 +86,7 @@ function botonMsj() {
 console.log("ejercicio 6")
 const colores = ["red", "blue", "green"]
 let indice = 0
+
 function btnColorFondo() {
 
     document.body.style.backgroundColor = colores[indice]
@@ -120,4 +121,77 @@ function btnTextoParrafo() {
     for (let i = 0; i < p.length; i++) {
         p[i].style.color = rojo
     }
+}
+
+
+// ejercicio 9
+function mostrarMsj() {
+    const msj = document.getElementById('msjOculto')
+    const btn = document.getElementById('btnMostrarMsj')
+
+    if (msj.style.display === "none") {
+        msj.style.display = "block"
+        btn.textContent = "Ocultar"
+    } else {
+        msj.style.display = "none"
+        btn.textContent = "Mostrar"
+    }
+}
+
+// ejercicio 10
+function actualizarTitulo() {
+    const titulo = document.getElementById('titulo')
+    const input = document.getElementById('inputTitulo')
+
+    titulo.textContent = input.value
+}
+
+// ejercicio 11
+const azul = "blue"
+const blanco = "white"
+function aplicarEstilos() {
+    const parrafos = document.getElementsByClassName('parrafosEjercicicio11')
+    for (let i = 0; i < parrafos.length; i++) {
+        parrafos[i].style.backgroundColor = azul
+        parrafos[i].style.color = blanco
+    }
+}
+
+// ejercicio 12
+function validarForm(event) {
+    event.preventDefault()
+    const inputNombre = document.getElementById('inputNombre')
+    const inputEmail = document.getElementById('inputEmail')
+    const msjForm = document.getElementById('msjForm')
+
+    if (inputNombre.value === "" || inputEmail.value === "") {
+        msjForm.textContent = "Por favor, complete todos los campos."
+        msjForm.style.color = "red"
+    } else {
+        msjForm.textContent = "Formulario enviado correctamente."
+        msjForm.style.color = "green"
+    }
+
+}
+
+
+//ejercicio 13
+function listaTareas() {
+    const lista = document.getElementById('listaTareas')
+    const tarea = document.getElementById('inputTarea')
+
+    const li = document.createElement('li')
+    li.textContent = tarea.value
+
+    const btnTachar = document.createElement('button')
+    btnTachar.textContent = "Tachar"
+
+    btnTachar.onclick = function () {
+        li.classList.toggle('tachado')
+    }
+
+    li.appendChild(btnTachar);
+    lista.appendChild(li)
+    input.value = ""
+
 }
